@@ -16,13 +16,18 @@
   <main>
     <h2 id="titulo">Aula 3 - Javascript DOM</h2>
     <p class="comandos">getElementById</p>
-    <p class="comandos">getElementsByTagName</p>
+    <p class="comandos" id="ex1">getElementsByTagName</p>
     <p class="comandos">getElementsByClassName</p>
     <p>Comandos para pegar os elementos.</p>
   </main>
   <script>
-    document.getElementById('menu1').innerHTML = 'Item 1'
-    document.getElementsByTagName('p')[1].innerHTML = 'Item 2'
+    document.getElementById('menu1').innerHTML = 'Item 1';
+    document.getElementsByTagName('p')[1].innerHTML = 'Item 2';
+    document.getElementsByTagName('p')[2].innerHTML = 'Item 3';
+    document.getElementsByClassName('comandos')[0].innerHTML+ '()';
+    document.getElementsByClassName('comandos')[1].innerHTML+ '()';
+    document.getElementsByClassName('comandos')[2].innerHTML+ '()';
+    document.getElementById('ex1').style.color = "green";
   </script>
 </body>
 </html>

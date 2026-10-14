@@ -65,12 +65,18 @@
         div.style.display = "none";
     });
 });
-document.querySelector("h2").addEventListener("mouseover", function() {
-    document.querySelectorAll("#titulo").forEach(function(h2) {
+    document.querySelector("h2").addEventListener("mouseover", function() {
+      document.querySelectorAll("#titulo").forEach(function(h2) {
         h2.style.border = "5px solid chartreuse "
         h2.style.backgroundColor = "red"
+      });
     });
-});
+    document.querySelector("h2").addEventListener("mouseout", function() {
+      document.querySelectorAll("#titulo").forEach(function(h2) {
+        h2.style.border = "none "
+        h2.style.backgroundColor = "#FFFFFF00"
+      });
+    });
   </script>
 </body>
 </html>

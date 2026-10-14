@@ -65,6 +65,12 @@
         div.style.display = "none";
     });
 });
+document.querySelector("h2").addEventListener("mouseover", function() {
+    document.querySelectorAll("#titulo").forEach(function(h2) {
+        h2.style.border = "5px solid chartreuse "
+        h2.style.backgroundColor = "red"
+    });
+});
   </script>
 </body>
 </html>

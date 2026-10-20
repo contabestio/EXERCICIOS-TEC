@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aulas de Tec</title>
+</head>
+<body>
+  <input id="texto" type="text">
+  <button onclick="adicionar()"></button>
+  <script>
+   function adicionar(){
+      const ndiv = document.createElement("div")
+      const nh2 = document.createElement("h2")
+      const texto = document.getElementById("texto").value
+
+      nh2.innerHTML = texto
+      ndiv.appendChild(nh2)
+      ndiv.style.border = "2px solid red"
+      document.body.appendChild(ndiv);
+   }
+  </script>
+</body>
+</html>

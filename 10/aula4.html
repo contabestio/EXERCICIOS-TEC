@@ -62,7 +62,11 @@
     }
    document.querySelector("button").addEventListener("click", function() {
     document.querySelectorAll("div").forEach(function(div) {
-        div.style.display = "none";
+      if (div.style.display === "none") {
+        div.style.display = ""
+      } else{
+      div.style.display = "none";
+      }
     });
 });
     document.querySelector("h2").addEventListener("mouseover", function() {

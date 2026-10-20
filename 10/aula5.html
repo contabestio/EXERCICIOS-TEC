@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+    div{
+      display: flex;      
+      width: 100%;        
+      height: 300px; 
+      flex: 1;
+      gap: 50px;
+      border: 2px solid red;
+      max-height: 10vh
+  }
+  h2{
+    max-width: 50%;
+  }
+  </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aulas de Tec</title>
 </head>
 <body>
   <input id="texto" type="text">
-  <button onclick="adicionar()"></button>
+  <button onclick="adicionar()" style="color: red;">nao aperte</button>
   <script>
    function adicionar(){
       const ndiv = document.createElement("div")
@@ -17,8 +31,20 @@
       nh2.innerHTML = texto
       ndiv.appendChild(nh2)
       ndiv.style.border = "2px solid red"
+      ndiv.style.padding = "5px"
+      ndiv.style.borderRadius = "5px"
       document.body.appendChild(ndiv);
+
+      const bot = document.createElement("button")
+      bot.innerHTML = "Remove"
+      bot.style.color = "red"
+      bot.style.maxWidth = "50%"
+      ndiv.appendChild(bot)
+      bot.addEventListener('click', function(){
+          ndiv.remove()
+      })
    }
+      
   </script>
 </body>
 </html>

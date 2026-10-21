@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url(https://i0.wp.com/media.culturedmag.com/az-culturedmag/img/library/tumblr-m7cioxmoox1rs5tla-1719238314760.jpg?resize=800%2C680&ssl=1);
+    }
+    div.botoes{
+      display: flex;
+       flex-direction: column;
+      height: 92vh;
+    }
+    div button{
+      border-radius: 20px;
+      background-color: palevioletred;
+      padding: 20px;
+      flex: 1;
+      border: 5px solid;
+      border-color: chocolate;
+      font-family: Geneva;
+      color: beige;
+      font-size: 29px;
+    }
+    img{
+      width: 92vh;
+      height: 92vh;
+    }
+  </style>
+</head>
+<body>
+ 
+  <img src="https://i.pinimg.com/736x/af/6f/4f/af6f4f16b35e2fb3de4038cf9d53d0cf.jpg" alt="">
+  <div class="botoes">
+    <button id="aum"> Aumentar</button>
+  <button id="red">Reduzir</button>
+  </div>
+  <div style="padding: 18vh; color: bisque;">
+    <h1 style="padding: 5px;border: 5px solid chocolate; border-radius: 20px; background-color: palevioletred;">Tamanho da Foto:</h1>
+  </div>
+
+  <script>
+    const foto = document.querySelector("img")
+    const aum = document.getElementById("aum")
+    const red = document.getElementById("red")
+    const dev = document.querySelector("div")
+    let text = document.querySelector("h1")
+    text.innerHTML = "Tamanho da Foto: "+ foto.clientHeight;
+    function aumentar(){
+      let waum = parseInt(foto.clientWidth);
+      if (waum<800){
+      foto.style.width = (waum + 30) + "px";
+      let haum = parseInt(foto.clientHeight);
+      foto.style.height = (haum + 30) + "px";
+      dev.style.height = foto.clientHeight + "px";
+      text.innerHTML = "Tamanho da Foto: "+ foto.clientHeight;
+      }
+    }
+    function reduzir(){
+      let wred = parseInt(foto.clientWidth);
+      if (wred>200){
+      foto.style.width = (wred - 30) + "px";
+      let hred = parseInt(foto.clientHeight);
+      foto.style.height = (hred - 30) + "px";
+      dev.style.height = foto.clientHeight + "px";
+      text.innerHTML = "Tamanho da Foto: "+ foto.clientHeight;
+
+      }
+    }
+    aum.addEventListener('click', function(){
+        aumentar()
+      })
+    red.addEventListener('click', function(){
+        reduzir()
+      })
+  </script>
+</body>
+</html>

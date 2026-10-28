@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h2>Log-in</h2>
+    <input id="texto" type="text">
+    <a href="ex5perfil.html">Perfil</a>
+    <button id="botao">entrar</button>
+  </div>
+  <script>
+      let usuario = localStorage.getItem("usuario")
+      if (usuario === ""){
+        window.location.href = "ex5login.html";
+      } else {
+        document.getElementById("mensagem").textContent = "Bem VIndo " + usuario + "!";
+      }
+  </script>
+</body>
+</html>

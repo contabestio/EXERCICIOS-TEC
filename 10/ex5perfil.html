@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Meu Perfil</h1>
+  <p id="mensagem"></p>
+  <a href="ex5inicio.html">voltar</a>
+   <script>
+let usuario = localStorage.getItem("usuario");
+if (usuario === null){
+  window.location.href = "ex5login.html"
+} else {
+  document.getElementById("mensagem").textContent = "usuario logado: " +usuario;
+}
+   </script>
+</body>
+</html>
